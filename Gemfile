@@ -6,7 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'dynamic_form', '1.1.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,17 +22,17 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test, :development do
+  gem 'rspec-rails', '~> 2.11'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-debugger'
+  gem 'launchy'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl', '2.6.4'
+  gem 'email_spec', '1.2.1'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
