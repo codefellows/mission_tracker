@@ -4,8 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Objective</th>
-    <th>Crew</th>
     <th>Captain</th>
+    <th>Crew</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +15,8 @@
   <tr>
     <td><%= mission.name %></td>
     <td><%= mission.objective %></td>
-    <td><%= mission.crew_id %></td>
-    <td><%= mission.captain_id %></td>
+    <td><%= mission.captain %></td>
+    <td><%= mission.crew %></td>
     <td><%= link_to 'Show', mission %></td>
     <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
     <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>

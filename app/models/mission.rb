@@ -1,5 +1,5 @@
 class Mission < ActiveRecord::Base
-  belongs_to :crew_id
-  belongs_to :captain_id
+  belongs_to :captain
+  belongs_to :crew
   attr_accessible :name, :objective
 end
