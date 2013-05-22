@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @crew.name %>
+</p>
+
+<p>
+  <b>Starship:</b>
+  <%= @crew.starship %>
+</p>
+
+
+<%= link_to 'Edit', edit_crew_path(@crew) %> |
+<%= link_to 'Back', crews_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mission.name %>
+</p>
+
+<p>
+  <b>Objective:</b>
+  <%= @mission.objective %>
+</p>
+
+<p>
+  <b>Crew:</b>
+  <%= @mission.crew_id %>
+</p>
+
+<p>
+  <b>Captain:</b>
+  <%= @mission.captain_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>
