@@ -1,4 +1,7 @@
 MissionTracker::Application.routes.draw do
+
+  root :to => "missions#index"
+
   resources :missions
 
 

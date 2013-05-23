@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :captain %><br />
-    <%= f.text_field :captain %>
+    <%= f.collection_select :captain_id, Captain.all, :id, :name, :prompt => "Select a Captain" %>
   </div>
   <div class="field">
     <%= f.label :crew %><br />
-    <%= f.text_field :crew %>
+    <%= f.collection_select :crew_id, Crew.all, :id, :name, :prompt => "Select a Crew" %>
   </div>
   <div class="actions">
     <%= f.submit %>

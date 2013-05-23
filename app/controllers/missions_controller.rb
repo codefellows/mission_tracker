@@ -40,7 +40,10 @@ class MissionsController < ApplicationController
   # POST /missions
   # POST /missions.json
   def create
-    @mission = Mission.new(params[:mission])
+
+    @mission = Mission.new(name: params[:mission][:name], objective: params[:mission][:objective])
+    @mission.captain=Captain.find_by_id(params[:mission][:captain_id])
+    @mission.crew=Crew.find_by_id(params[:mission][:crew_id])
 
     respond_to do |format|
       if @mission.save
@@ -57,9 +60,13 @@ class MissionsController < ApplicationController
   # PUT /missions/1.json
   def update
     @mission = Mission.find(params[:id])
+    @mission.name = params[:mission][:name]
+    @mission.objective = params[:mission][:objective]
+    @mission.captain_id = params[:mission][:captain_id]
+    @mission.crew_id = params[:mission][:crew_id]
 
     respond_to do |format|
-      if @mission.update_attributes(params[:mission])
+      if @mission.save
         format.html { redirect_to @mission, notice: 'Mission was successfully updated.' }
         format.json { head :no_content }
       else
